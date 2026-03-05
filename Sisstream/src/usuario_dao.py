@@ -42,7 +42,7 @@ class UsuarioDAO:
             with conn:
                 with conn.cursor() as cur:
                     cur.execute(sql, (nome, email, data_nascimento, pais, id_usuario))
-                    return cur.rowcount  # 1 se atualizou, 0 se não encontrou
+                    return cur.rowcount
         finally:
             conn.close()
 

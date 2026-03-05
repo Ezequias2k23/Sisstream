@@ -21,6 +21,6 @@ CREATE TABLE avaliacao (
     nota DECIMAL(3,2),
     comentario TEXT,
     data_avaliacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    id_usuario INT REFERENCES usuario(id_usuario),
-    id_producao INT REFERENCES producao(id_producao)
+    id_usuario INT REFERENCES usuario(id_usuario) ON DELETE CASCADE,
+    id_producao INT REFERENCES producao(id_producao) ON DELETE CASCADE
 );
